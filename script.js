@@ -53,7 +53,7 @@ function randomPassword(){
 // created random password if conditional
   var passwordSelection = []
         if(confirmLowerCase ){
-        passwordSelection = passwordSelection.concat()
+        passwordSelection = passwordSelection.concat(lowerCase)
         }
         if (confirmNumbers ){
           passwordSelection = passwordSelection.concat(numbers)
