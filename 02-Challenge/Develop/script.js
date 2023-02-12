@@ -2,9 +2,9 @@
 var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+   generatePassword();
   var passwordText = document.querySelector("#password");
-  randomPassword()
+  var password = randomPassword()
   passwordText.value = password;
 
 }
