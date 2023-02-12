@@ -2,8 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
+  // removed password var from generatePassword since i created new function for passwords to be assigned
+  // generatePAssword is now for prompts on screen
    generatePassword();
   var passwordText = document.querySelector("#password");
+  // changed password var to randomPassword as it will be the call function with passwords
   var password = randomPassword()
   passwordText.value = password;
 
@@ -36,7 +39,6 @@ function generatePassword(){
         confirmLowerCase = (confirm("Would you like to add lower case letters?"))
         confirmUpperCase = (confirm("Would you like to add upper case letters?"))
 // if statement incase they chose no criterias
-
         if (confirmLowerCase === false && confirmNumbers === false && confirmSpecialCharacter === false && confirmUpperCase === false ){
           alert("Please pick atleast one option")
         confirmNumbers = (confirm("Would you like to add numbers?"))
@@ -48,7 +50,7 @@ function generatePassword(){
 }
 
 function randomPassword(){
-
+// created random password if conditional
   var passwordSelection = []
         if(confirmLowerCase ){
         passwordSelection = passwordSelection.concat()
@@ -62,12 +64,12 @@ function randomPassword(){
         if(confirmUpperCase ){
           passwordSelection = passwordSelection.concat(upperCase)
         }
-        console.log(passwordSelection)
+
+       //created loop for password generator based on users selection
         var randomPassword = ""
 
         for (var i = 0; i < promptLength; i++){
           randomPassword = randomPassword + passwordSelection[Math.floor(Math.random() * passwordSelection.length)];
-          console.log(randomPassword)
         }
         return randomPassword;
 }
