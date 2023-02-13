@@ -32,6 +32,7 @@ function generatePassword(){
       if(promptLength <= 7 || promptLength >= 129){
         alert("password length must be between 8-128 letts!")
         promptLength = (prompt("Choose the length of your password"))
+        generatePassword()
       }
         alert("your password will be " + promptLength)
         confirmNumbers = (confirm("Would you like to add numbers?"))
