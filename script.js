@@ -26,15 +26,15 @@ var confirmSpecialCharacter;
 var confirmLowerCase;
 var confirmUpperCase;
 
+
+// created function for prompts
 function generatePassword(){
     promptLength = (prompt("Choose the length of your password!"));
 //  if statement to give back an error message if they have chosen outside the criteria
-      if(promptLength <= 7 || promptLength >= 129){
-        alert("password length must be between 8-128 letts!")
-        promptLength = (prompt("Choose the length of your password"))
-        generatePassword()
+      if (promptLength <= 7 || promptLength >= 129 ){
+        alert("password length must be between 8-128 characters!")
+        return;
       }
-        alert("your password will be " + promptLength)
         confirmNumbers = (confirm("Would you like to add numbers?"))
         confirmSpecialCharacter = (confirm("Would you like to add special characters?"))
         confirmLowerCase = (confirm("Would you like to add lower case letters?"))
@@ -42,27 +42,22 @@ function generatePassword(){
 // if statement incase they chose no criterias
         if (confirmLowerCase === false && confirmNumbers === false && confirmSpecialCharacter === false && confirmUpperCase === false ){
           alert("Please pick atleast one option")
-        confirmNumbers = (confirm("Would you like to add numbers?"))
-        confirmSpecialCharacter = (confirm("Would you like to add special characters?"))
-        confirmLowerCase = (confirm("Would you like to add lower case letters"))
-        confirmUpperCase = (confirm("Would you like to add upper case letters"))
         }
-
 }
 
 function randomPassword(){
-// created random password if conditional
+// created random password if conditional based on prompt selection in generatePassword function
   var passwordSelection = []
-        if(confirmLowerCase ){
+        if (confirmLowerCase ){
         passwordSelection = passwordSelection.concat(lowerCase)
         }
         if (confirmNumbers ){
           passwordSelection = passwordSelection.concat(numbers)
         }
-        if(confirmSpecialCharacter ){
+        if (confirmSpecialCharacter ){
           passwordSelection = passwordSelection.concat(specalCharacter)
         }
-        if(confirmUpperCase ){
+        if (confirmUpperCase ){
           passwordSelection = passwordSelection.concat(upperCase)
         }
 
