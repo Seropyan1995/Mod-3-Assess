@@ -12,7 +12,7 @@ Implemted: Visual Studio IDE, Dev Tools, JavasScript along with preset HTML/CSS
 The following image shows the web application's appearance:
 When the button is clicked it will send you through multiple prompts asking you to choose how long and the criteria of your password to meet.
 Then it will generate a random password based on your preferences.
-![Image showing Random Password Generators function.](/02-Challenge/Assets/ReadmeSS.png)
+![Image showing Random Password Generators function.](/Assets/ReadmeSS.png)
 
 The webpage can be found at [My Random Password Generator](https://seropyan1995.github.io/Mod-3-Assess/)
 
